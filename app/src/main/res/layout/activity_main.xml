@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_background"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context="com.application.mymothernature.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="187dp"
+        android:layout_height="182dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:contentDescription="app logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/textLogo"
+        android:layout_width="356dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="text logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/text_logo" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/leaderboards_button"
+        android:layout_width="174dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:floating_background_color="@android:color/holo_green_light"
+        app:floating_left_icon="@drawable/leaderboard_icon"
+        app:floating_title="LeaderBoards   "
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_question" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/play_button"
+        android:layout_width="174dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        app:floating_background_color="@android:color/holo_orange_light"
+        app:floating_left_icon="@drawable/play_icon"
+        app:floating_title="Play New Game "
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/new_question"
+        android:layout_width="174dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:floating_background_color="@android:color/holo_orange_light"
+        app:floating_left_icon="@drawable/upload_logo"
+        app:floating_title="New Question    "
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_button" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/view_profile"
+        android:layout_width="174dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:floating_background_color="@android:color/holo_green_light"
+        app:floating_left_icon="@drawable/account_logo"
+        app:floating_title="View Profile       "
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboards_button" />
+
+
+</android.support.constraint.ConstraintLayout>
