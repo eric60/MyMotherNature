@@ -25,25 +25,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.476"
-        app:srcCompat="@drawable/product_plastic_waste" />
+        app:srcCompat="@drawable/game_plastic_waste" />
 
     <TextView
         android:id="@+id/game_score"
         android:layout_width="143dp"
         android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/border_green_light"
-        android:text="EcoScore: 0"
+        android:text="Ecoscore:0"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/game_pic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="@+id/game_timer" />
 
     <TextView
@@ -72,7 +72,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="452dp"
         android:background="@drawable/border_green_light"
-        android:text="00:20"
+        android:text="00:00"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -83,27 +83,31 @@
 
     <TextView
         android:id="@+id/game_question"
-        android:layout_width="321dp"
-        android:layout_height="69dp"
+        android:layout_width="323dp"
+        android:layout_height="101dp"
         android:layout_above="@id/radio_group"
+        android:layout_margin="12dp"
+        android:padding="3dp"
         android:background="@drawable/border_green_light"
-        android:text="How much plastic waste do humans produce every year?"
+        android:text="this is text this is text this is text this text this is text xt this is text this text this is text xt this is text this text this is text"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525" />
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="321dp"
         android:layout_height="173dp"
         android:layout_centerVertical="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/game_question">
 
@@ -112,7 +116,7 @@
             android:layout_width="320dp"
             android:layout_height="47dp"
             android:background="@drawable/border_green_light"
-            android:text="10 million tons"
+            android:text="filler"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22dp"
@@ -124,7 +128,7 @@
             android:layout_height="47dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/border_green_light"
-            android:text="80 million tons"
+            android:text="filler"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22dp"
@@ -136,7 +140,7 @@
             android:layout_height="47dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/border_green_light"
-            android:text="300 million tons"
+            android:text="filler"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22dp"
@@ -145,19 +149,25 @@
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/confirm_button"
-        android:layout_width="113dp"
+        android:layout_width="134dp"
         android:layout_height="43dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="28dp"
-        app:floating_background_color="@android:color/holo_green_light"
-        app:floating_title="Confirm"
+        android:layout_marginTop="8dp"
+        app:floating_background_color="@android:color/holo_orange_light"
+        app:floating_title="Finish Quiz"
         app:floating_title_color="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radio_group">
-
     </ru.dimorinny.floatingtextbutton.FloatingTextButton>
 
+    <!--
+    <activity
+        android:name=".GameActivity"
+        android:screenOrientation="portrait"
+        android:configChanges="keyboard|keyboardHidden|orientation">
+    </activity>
+-->
 </android.support.constraint.ConstraintLayout>

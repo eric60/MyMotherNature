@@ -50,6 +50,10 @@
         <activity
             android:name="com.application.mymothernature.UploadQuestion"
             android:label="@string/title_activity_upload_question"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.application.mymothernature.AfterGame"
+            android:label="@string/title_activity_after_game"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

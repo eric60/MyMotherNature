@@ -41,52 +41,50 @@
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.186" />
 
     <RadioGroup
         android:id="@+id/radio_group"
-        android:layout_width="215dp"
-        android:layout_height="112dp"
+        android:layout_width="236dp"
+        android:layout_height="179dp"
         android:layout_centerVertical="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="320dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="152dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/difficulty"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radio1"
+            android:id="@+id/easy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:background="@drawable/border_green_light"
-            android:text="                  EASY"
+            android:text="EASY:     20sec/5pts"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
 
         <RadioButton
-            android:id="@+id/radio2"
+            android:id="@+id/med"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/border_orange"
             android:checked="true"
-            android:text="               MEDIUM"
+            android:text="MED:      12sec/8pts"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radio3"
+            android:id="@+id/hard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/border_red"
-            android:text="                  HARD"
+            android:text="HARD:    5 sec/12pts"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
     </RadioGroup>
@@ -97,12 +95,12 @@
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="68dp"
-        app:floating_background_color="@android:color/holo_green_light"
+        android:layout_marginTop="16dp"
+        app:floating_background_color="@android:color/holo_orange_light"
         app:floating_title="Start Game"
-        app:floating_title_color="@android:color/white"
+        app:floating_title_color="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radio_group">
 

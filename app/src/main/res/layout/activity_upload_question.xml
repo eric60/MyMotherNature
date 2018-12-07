@@ -12,48 +12,52 @@
     tools:context="com.application.mymothernature.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <EditText
+        android:id="@+id/edit_ecolutions"
+        android:layout_width="314dp"
+        android:layout_height="128dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Enter Your Ecolution\nHow do you think you can solve an environmental problem through changing an everyday task? "
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="247dp" />
+
     <TextView
         android:id="@+id/ecolutions"
         android:layout_width="313dp"
         android:layout_height="37dp"
         android:layout_above="@id/radio_group"
         android:background="@drawable/border_orange"
-        android:text="   Select Difficulty drop down menu"
+        android:text="   Select Category drop down menu"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="170dp"
-        android:layout_height="61dp"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="app logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.128" />
 
     <EditText
         android:layout_width="311dp"
         android:layout_height="114dp"
-        android:layout_margin="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:background="@drawable/round"
         android:backgroundTint="@android:color/holo_orange_light"
-        android:hint="Enter Your Question"
+        android:hint="Enter Your EcoQuestion"
         android:padding="8dp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="125dp" />
+        tools:layout_editor_absoluteY="117dp" />
 
     <TextView
         android:id="@+id/text_upload"
@@ -71,7 +75,7 @@
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/submit"

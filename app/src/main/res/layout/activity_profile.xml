@@ -13,31 +13,68 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/ecoscore"
+        android:layout_width="151dp"
+        android:layout_height="93dp"
+        android:layout_above="@id/radio_group"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/border_orange"
+        android:text="EcoScore: 103\nFriends: 220    \n Rank: 4              "
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/ecolutions"
         android:layout_width="313dp"
         android:layout_height="37dp"
         android:layout_above="@id/radio_group"
-        android:background="@drawable/border_orange"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_orange_rectangle"
         android:text="   Your Ecolutions"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facebook_name"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/ecolutions"
+        android:layout_width="311dp"
+        android:layout_height="88dp"
+        android:layout_above="@id/radio_group"
+        android:background="@drawable/border_rectangle_grey"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        android:text="   Your Ecolutions\n\n\nfe\nfefe"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.659" />
+
 
     <ImageView
         android:id="@+id/profile_pic"
         android:layout_width="154dp"
         android:layout_height="179dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
         android:background="@drawable/border_transparant_orange"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/profile_profile_pic" />
@@ -48,7 +85,7 @@
         android:layout_height="37dp"
         android:layout_above="@id/radio_group"
         android:background="@drawable/border_orange"
-        android:text="John Doe @CoolUsername"
+        android:text="John Doe @loveMessiFan21"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp"
@@ -58,23 +95,7 @@
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
-
-    <TextView
-        android:id="@+id/rank"
-        android:layout_width="313dp"
-        android:layout_height="37dp"
-        android:layout_above="@id/radio_group"
-        android:background="@drawable/border_orange"
-        android:text="   Rank 4"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.394" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/leaderboards_button"
@@ -89,22 +110,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="386dp" />
+        tools:layout_editor_absoluteY="440dp" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/view_profile"
-        android:layout_width="174dp"
-        android:layout_height="47dp"
+        android:layout_width="168dp"
+        android:layout_height="46dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         app:floating_background_color="@android:color/holo_green_light"
         app:floating_left_icon="@drawable/account_logo"
         app:floating_title="View Profile       "
         app:floating_title_color="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="468dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
