@@ -17,10 +17,10 @@
         android:layout_width="187dp"
         android:layout_height="182dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="56dp"
         android:contentDescription="app logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -31,14 +31,11 @@
         android:layout_height="52dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:contentDescription="text logo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/text_logo" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
@@ -62,18 +59,14 @@
         android:layout_height="47dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="8dp"
-        app:floating_background_color="@android:color/holo_orange_light"
+        app:floating_background_color="@android:color/holo_green_light"
         app:floating_left_icon="@drawable/play_icon"
         app:floating_title="Play New Game "
         app:floating_title_color="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
+        app:layout_constraintTop_toBottomOf="@+id/textLogo" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/new_question"
@@ -91,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/play_button" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
-        android:id="@+id/view_profile"
+        android:id="@+id/view_profile_button"
         android:layout_width="174dp"
         android:layout_height="47dp"
         android:layout_centerHorizontal="true"

@@ -15,26 +15,26 @@
     <TextView
         android:id="@+id/ecoscore"
         android:layout_width="151dp"
-        android:layout_height="93dp"
+        android:layout_height="145dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/border_orange"
-        android:text="EcoScore: 103\nFriends: 220    \n Rank: 4              "
+        android:background="@drawable/border_rectangle_grey"
+        android:text="EcoScore: \n103\nFriends: \n     220    \n  Rank: \n              4              "
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <TextView
-        android:id="@+id/ecolutions"
+        android:id="@+id/title_ecolutions"
         android:layout_width="313dp"
-        android:layout_height="37dp"
+        android:layout_height="50dp"
         android:layout_above="@id/radio_group"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="288dp"
         android:background="@drawable/border_orange_rectangle"
         android:text="   Your Ecolutions"
         android:textColor="@android:color/white"
@@ -42,14 +42,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/facebook_name"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintTop_toBottomOf="@+id/ecoscore"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/ecolutions"
-        android:layout_width="311dp"
+        android:layout_width="318dp"
         android:layout_height="88dp"
         android:layout_above="@id/radio_group"
         android:background="@drawable/border_rectangle_grey"
@@ -59,13 +59,70 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.659" />
+        app:layout_constraintStart_toStartOf="@+id/title_ecolutions"
+        app:layout_constraintTop_toBottomOf="@+id/title_ecolutions" />
 
+    <TextView
+        android:id="@+id/title_ecoquestions"
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/radio_group"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_orange_rectangle"
+        android:text="   Your EcoQuestions"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ecolutions"
+        app:layout_constraintTop_toBottomOf="@+id/ecolutions" />
+
+    <TextView
+        android:id="@+id/ecoquestions"
+        android:layout_width="317dp"
+        android:layout_height="88dp"
+        android:layout_above="@id/radio_group"
+        android:background="@drawable/border_rectangle_grey"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        android:text="   Your Ecoquestions\n\n\nfe\nfefe"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/title_ecoquestions"
+        app:layout_constraintTop_toBottomOf="@+id/title_ecoquestions" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/share_ecoquestion"
+        android:layout_width="116dp"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:floating_background_color="@android:color/holo_green_light"
+        app:floating_left_icon="@drawable/icon_share"
+        app:floating_title="Share "
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/title_ecoquestions"
+        app:layout_constraintTop_toTopOf="@+id/title_ecoquestions">
+
+    </ru.dimorinny.floatingtextbutton.FloatingTextButton>
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/share_ecolution"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:floating_background_color="@android:color/holo_green_light"
+        app:floating_left_icon="@drawable/icon_share"
+        app:floating_title="Share  "
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/title_ecolutions"
+        app:layout_constraintTop_toTopOf="@+id/title_ecolutions">
+
+    </ru.dimorinny.floatingtextbutton.FloatingTextButton>
 
     <ImageView
         android:id="@+id/profile_pic"
@@ -74,58 +131,28 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/border_transparant_orange"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile_profile_pic" />
+        app:srcCompat="@drawable/profile_profile_pic"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/facebook_name"
-        android:layout_width="313dp"
-        android:layout_height="37dp"
+        android:id="@+id/username"
+        android:layout_width="155dp"
+        android:layout_height="34dp"
         android:layout_above="@id/radio_group"
         android:background="@drawable/border_orange"
-        android:text="John Doe @loveMessiFan21"
+        android:text="MessiFan"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
-
-    <ru.dimorinny.floatingtextbutton.FloatingTextButton
-        android:id="@+id/leaderboards_button"
-        android:layout_width="174dp"
-        android:layout_height="47dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:floating_background_color="@android:color/holo_green_light"
-        app:floating_left_icon="@drawable/leaderboard_icon"
-        app:floating_title="View Ranking"
-        app:floating_title_color="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="440dp" />
-
-    <ru.dimorinny.floatingtextbutton.FloatingTextButton
-        android:id="@+id/view_profile"
-        android:layout_width="168dp"
-        android:layout_height="46dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:floating_background_color="@android:color/holo_green_light"
-        app:floating_left_icon="@drawable/account_logo"
-        app:floating_title="View Profile       "
-        app:floating_title_color="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

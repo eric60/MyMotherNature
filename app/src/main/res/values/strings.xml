@@ -2,6 +2,11 @@
     <string name="app_name">MyMotherNature</string>
     <string name="title_activity_login">Sign in</string>
 
+    <string-array name="rating">
+        <item>Does not address the environment</item>
+    </string-array>
+
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
@@ -112,4 +117,6 @@
     <string name="title_activity_before_game_start">BeforeGameStart</string>
     <string name="title_activity_upload_question">UploadQuestion</string>
     <string name="title_activity_after_game">AfterGame</string>
+    <string name="title_activity_sign_up_profile">SignUpProfile</string>
+    <string name="title_activity_review_question">ReviewQuestion</string>
 </resources>

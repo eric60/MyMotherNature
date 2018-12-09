@@ -7,7 +7,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ericshi.mymothernature.R;
@@ -15,7 +14,7 @@ import com.example.ericshi.mymothernature.R;
 import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 
 public class MainActivity extends AppCompatActivity {
-    Dialog popup;
+    private Dialog popup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,16 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ChooseCategoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        FloatingTextButton newQuestionButton = (FloatingTextButton) findViewById(R.id.new_question);
+        newQuestionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ReviewQuestion.class);
                 startActivity(intent);
             }
         });
@@ -41,11 +49,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        FloatingTextButton viewProfileButton = findViewById(R.id.view_profile_button);
+        viewProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     public void showDialog() {
         TextView closeButton;
-        popup.setContentView(R.layout.popup);
+        popup.setContentView(R.layout.popup1);
         closeButton  =(TextView) popup.findViewById(R.id.exit_button);
 
         closeButton.setOnClickListener(new View.OnClickListener() {

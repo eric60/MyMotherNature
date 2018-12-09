@@ -25,22 +25,22 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="362dp"
-        android:layout_height="491dp"
+        android:layout_width="378dp"
+        android:layout_height="559dp"
         android:layout_above="@id/radio_group"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:padding="5dp"
-        android:text="\nWelcome to MyMotherNature!\n\nThis is an environment focused android game that hopes to educate people on our impact towards the environment and how to solve the problems through Ecolutions. \n\nPlay our trivia game and earn EcoPoints to compete with your friends on social media! \n\nYou also earn EcoPoints for sharing your Ecolutions with friends and even uploading your own EcoQuestions that could one day be in the game!.\n Have fun! "
+        android:text="\nWelcome to MyMotherNature's upload your own Trivia EcoQuestion feature! \n\nYou must first review another fellow player's question. This gives you a chance to see your peer's own questions and to think about your own.\n\nEcoQuestion Rules\n1. Question must relate to the environment \n2. Question must underlie an environmental issue caused by human behavior regarding \nTransportaion, Human Food Consumption and Waste, Human Product Consumption and Waste\n\nThat's it! Have fun and keep learning and saving our environment by changing your behavior and following your Ecolutions! "
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.275" />
 
 </android.support.constraint.ConstraintLayout>

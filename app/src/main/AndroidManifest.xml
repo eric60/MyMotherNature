@@ -54,7 +54,15 @@
         <activity
             android:name="com.application.mymothernature.AfterGame"
             android:label="@string/title_activity_after_game"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.application.mymothernature.SignUpProfile"
+            android:label="@string/title_activity_sign_up_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.application.mymothernature.ReviewQuestion"
+            android:label="@string/title_activity_review_question"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

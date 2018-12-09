@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     private FloatingTextButton login;
     private FloatingTextButton facebookLogin;
     private FloatingTextButton leaveButton;
+    private FloatingTextButton signUpButton;
     private TextView displayInfo;
     private int attempts = 5;
 
@@ -28,9 +29,11 @@ public class LoginActivity extends AppCompatActivity {
 
         email = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.password);
+
         login = (FloatingTextButton)findViewById(R.id.regular_sign_in);
         facebookLogin = (FloatingTextButton)findViewById(R.id.facebook_sign_in);
-        leaveButton = (FloatingTextButton)findViewById(R.id.leave_button);
+        signUpButton = findViewById(R.id.signup_button);
+        //leaveButton = (FloatingTextButton)findViewById(R.id.leave_button);
         displayInfo = (TextView)findViewById(R.id.displayInfo);
 
         displayInfo.setText("");
@@ -47,17 +50,28 @@ public class LoginActivity extends AppCompatActivity {
                 validate(email.getText().toString(), password.getText().toString());
             }
         });
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        /*
         leaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 validate(email.getText().toString(), password.getText().toString());
             }
         });
+        */
     }
 
     private void validate(String userName, String userPassword){
         if((userName.equals("name")) && (userPassword.equals("pass"))){
-            Intent intent = new Intent(getApplicationContext(), ChooseCategoryActivity.class);
+            Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
             startActivity(intent);
         }else{
             attempts--;

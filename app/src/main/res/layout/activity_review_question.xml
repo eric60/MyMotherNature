@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_background"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context="com.application.mymothernature.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate Their Question"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/rate_question"
+        app:layout_constraintStart_toStartOf="@+id/rate_question" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Ecolution Suggestion"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_ecolutions"
+        app:layout_constraintStart_toStartOf="@+id/edit_ecolutions" />
+
+    <TextView
+        android:id="@+id/text_upload2"
+        android:layout_width="320dp"
+        android:layout_height="133dp"
+        android:layout_above="@id/radio_group"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_orange"
+        android:text="What percentage of drivers commute solo and don't carpool? Not carpooling causes more cars on the road, more traffic, and more CO2!"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_upload" />
+
+    <EditText
+        android:id="@+id/edit_ecolutions"
+        android:layout_width="314dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Suggest an Ecolution to the underlying environmental problem.\nE.g.Try to take public transportation whenever possible.  "
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/rate_question"
+        app:layout_constraintTop_toBottomOf="@+id/rate_question" />
+
+    <Spinner
+        android:id="@+id/rate_question"
+        android:layout_width="313dp"
+        android:layout_height="37dp"
+        android:layout_above="@id/radio_group"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/border_orange"
+        android:text="   Select Category drop down menu"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_upload2"
+        app:layout_constraintTop_toBottomOf="@+id/text_upload2" />
+
+    <TextView
+        android:id="@+id/text_upload"
+        android:layout_width="321dp"
+        android:layout_height="84dp"
+        android:layout_above="@id/radio_group"
+        android:background="@drawable/border_orange"
+        android:text="Review another user's EcoQuestion before submitting yours!"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/submit_review"
+        android:layout_width="130dp"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        app:floating_background_color="@android:color/holo_green_light"
+        app:floating_left_icon="@drawable/upload_logo"
+        app:floating_title="Submit"
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_ecolutions" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Their EcoQuestion"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_upload2"
+        app:layout_constraintStart_toStartOf="@+id/text_upload2" />
+
+
+</android.support.constraint.ConstraintLayout>

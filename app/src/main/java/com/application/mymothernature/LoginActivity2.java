@@ -30,7 +30,7 @@ public class LoginActivity2 extends AppCompatActivity {
         password = (EditText)findViewById(R.id.password);
         login = (FloatingTextButton)findViewById(R.id.regular_sign_in);
         facebookLogin = (FloatingTextButton)findViewById(R.id.facebook_sign_in);
-        leaveButton = (FloatingTextButton)findViewById(R.id.leave_button);
+        //leaveButton = (FloatingTextButton)findViewById(R.id.leave_button);
         displayInfo = (TextView)findViewById(R.id.displayInfo);
 
         displayInfo.setText("");
@@ -47,12 +47,14 @@ public class LoginActivity2 extends AppCompatActivity {
                 validate(email.getText().toString(), password.getText().toString());
             }
         });
+        /*
         leaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 validate(email.getText().toString(), password.getText().toString());
             }
         });
+        */
     }
 
     private void validate(String userName, String userPassword){
