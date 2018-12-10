@@ -24,6 +24,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private FloatingTextButton sharebtn1;
     private FloatingTextButton sharebtn2;
+    private FloatingTextButton button_go_home;
 
 
 
@@ -38,7 +39,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         String afterGame_ecoquestions = getIntent().getStringExtra("allQuestions"); // problem - null at beginning of string?
-        String afterGame_ecolutions = getIntent().getStringExtra("allEcoStrings");
+        String afterGame_ecolutions = getIntent().getStringExtra("allEcoStrings"); // problem - null at beginning of string?
 
         String afterGameScore = getIntent().getStringExtra("game_score");
 
@@ -49,20 +50,34 @@ public class ProfileActivity extends AppCompatActivity {
         profile_score = findViewById(R.id.ecoscore);
 
         // could be 2 different attempts: 1 from signupprofile, 1 from aftergame
-        profile_userName.setText(input_userName);
-        profile_ecoquestions.setText(input_ecoquestion);
-        profile_ecoquestions.setText(afterGame_ecoquestions);
+        if(input_userName != null) {
+            profile_userName.setText(input_userName);
+        } else {
+            profile_userName.setText("Username");
+        }
+        if(input_ecoquestion != null) {
+            profile_ecoquestions.setText(input_ecoquestion);
+        } else {
+            profile_ecoquestions.setText(afterGame_ecoquestions);
+        }
 
         // could be 2 different attempts: 1 from signupprofile, 1 from aftergame
-        profile_ecolutions.setText(input_ecolution);
-        profile_ecolutions.setText(afterGame_ecolutions);
+        if(input_ecolution != null) {
+            profile_ecolutions.setText(input_ecolution);
 
+        } else {
+            profile_ecolutions.setText(afterGame_ecolutions);
+        }
 
-        profile_score.setText("EcoScore: " + afterGameScore);
+        if(afterGameScore != null) {
+            profile_score.setText("EcoScore: " + afterGameScore);
+        } else {
+            profile_score.setText("EcoScore: 10");
+        }
+
 
         profile_ecolutions.setMovementMethod(new ScrollingMovementMethod());
         profile_ecoquestions.setMovementMethod(new ScrollingMovementMethod());
-
 
         sharebtn1 = findViewById(R.id.share_ecoquestion);
         sharebtn2 = findViewById(R.id.share_ecolution);
@@ -90,6 +105,15 @@ public class ProfileActivity extends AppCompatActivity {
                 myIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 myIntent.putExtra(Intent.EXTRA_TEXT, body);
                 startActivity(Intent.createChooser(myIntent, "Share using"));
+            }
+        });
+
+        button_go_home = findViewById(R.id.button_home);
+        button_go_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -55,8 +55,8 @@ public class GameActivity extends AppCompatActivity {
     private AddQuestions questionObj;
     private ArrayList<Questions> listQuestions;
 
-    private String passedQuestions;
-    private String passedEcolutions;
+    private String passedQuestions = "";
+    private String passedEcolutions = "";
 
     // --------------------------------------------------------deprecated code
 
@@ -156,6 +156,7 @@ public class GameActivity extends AppCompatActivity {
         String scoreString = Integer.toString(scoreTotal);
 
         myIntent.putExtra("extra", scoreString);
+        System.out.println(passedQuestions);
         myIntent.putExtra("passedQues", passedQuestions.toString());
         myIntent.putExtra("passedEcolutions", passedEcolutions.toString());
 

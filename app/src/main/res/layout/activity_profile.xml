@@ -4,7 +4,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 -->
@@ -97,9 +97,7 @@
         android:layout_width="325dp"
         android:layout_height="50dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/border_orange_rectangle"
         android:text="   Your EcoQuestions"
         android:textColor="@android:color/white"
@@ -164,9 +162,8 @@
         android:layout_width="154dp"
         android:layout_height="179dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:background="@drawable/border_transparant_orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -191,4 +188,21 @@
         app:layout_constraintTop_toTopOf="@+id/profile_pic" />
 
 
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/button_home"
+        android:layout_width="145dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="16dp"
+        app:floating_background_color="@android:color/holo_green_light"
+        app:floating_left_icon="@drawable/logo"
+        app:floating_title="Go Home"
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/ecolutions"
+        app:layout_constraintTop_toBottomOf="@+id/ecolutions" />
+
 </android.support.constraint.ConstraintLayout>
+
