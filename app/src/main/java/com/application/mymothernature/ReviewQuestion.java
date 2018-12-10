@@ -9,9 +9,11 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.TextView;
@@ -28,6 +30,7 @@ import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 public class ReviewQuestion extends AppCompatActivity implements OnItemSelectedListener{
     //  private Spinner rateQuestion;
         private Dialog popup;
+        private EditText edit_ecolutions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +42,10 @@ public class ReviewQuestion extends AppCompatActivity implements OnItemSelectedL
 
         Spinner rateQuestion = findViewById(R.id.rate_question);
         rateQuestion.setOnItemSelectedListener(this);
-
         List<String> choices = new ArrayList<String>();
-        choices.add("1. Good EcoQuestion that makes you think");
-        choices.add("2. Okay EcoQuestion but could be more interesting");
-        choices.add("3. Bad EcoQuestion that is boring/too obvious");
+        choices.add("1. Good. Question made me think");
+        choices.add("2. Okay. Could be more interesting");
+        choices.add("3. Bad. Question was boring/too obvious");
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, choices);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -53,6 +55,10 @@ public class ReviewQuestion extends AppCompatActivity implements OnItemSelectedL
         submitReviewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                edit_ecolutions = findViewById(R.id.edit_ecolutions);
+                if(TextUtils.isEmpty(edit_ecolutions.getText())) {
+                    Toast.makeText(getApplicationContext(), "Please fill out all selections", Toast.LENGTH_SHORT).show();
+                }
                 Intent intent = new Intent(getApplicationContext(), UploadQuestion.class);
                 startActivity(intent);
             }

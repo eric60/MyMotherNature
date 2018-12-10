@@ -17,7 +17,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     private FloatingTextButton login;
     private FloatingTextButton facebookLogin;
-    private FloatingTextButton leaveButton;
     private FloatingTextButton signUpButton;
     private TextView displayInfo;
     private int attempts = 5;
@@ -33,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
         login = (FloatingTextButton)findViewById(R.id.regular_sign_in);
         facebookLogin = (FloatingTextButton)findViewById(R.id.facebook_sign_in);
         signUpButton = findViewById(R.id.signup_button);
-        //leaveButton = (FloatingTextButton)findViewById(R.id.leave_button);
         displayInfo = (TextView)findViewById(R.id.displayInfo);
 
         displayInfo.setText("");
@@ -53,20 +51,11 @@ public class LoginActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SignUpProfile.class);
                 startActivity(intent);
             }
         });
 
-
-        /*
-        leaveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                validate(email.getText().toString(), password.getText().toString());
-            }
-        });
-        */
     }
 
     private void validate(String userName, String userPassword){

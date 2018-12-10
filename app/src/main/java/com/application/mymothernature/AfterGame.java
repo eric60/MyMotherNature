@@ -16,6 +16,11 @@ import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 public class AfterGame extends AppCompatActivity {
 
     private TextView textScore;
+    private FloatingTextButton sharebtn1;
+    private FloatingTextButton sharebtn2;
+    private FloatingTextButton sharebtn3;
+    private FloatingTextButton sharebtn4;
+    private FloatingTextButton sharebtn5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

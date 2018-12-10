@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,109 +20,188 @@
     tools:context="com.application.mymothernature.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:id="@+id/menu_knowledge_now"
-        android:layout_width="313dp"
-        android:layout_height="37dp"
-        android:layout_above="@id/radio_group"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:background="@drawable/border_orange"
-        android:text=" How much do you know about the environement "
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="318dp" />
 
-    <TextView
-        android:id="@+id/first_name"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginRight="228dp"
-        android:text="First Name"
-        android:textColor="@android:color/white"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/edit_first_name"
-        app:layout_constraintEnd_toEndOf="@+id/edit_first_name" />
+        <TextView
+            android:id="@+id/text_first_ecolution"
+            android:layout_width="258dp"
+            android:layout_height="26dp"
+            android:text="Enter your first Ecolution!"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_first_ecolution"
+            app:layout_constraintStart_toStartOf="@+id/edit_first_ecolution" />
 
-    <EditText
-        android:id="@+id/edit_first_name"
-        android:layout_width="311dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/round"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:hint="Enter First Name"
-        android:padding="8dp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_upload" />
-
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="83dp"
-        android:layout_height="28dp"
-        android:text="Password"
-        android:textColor="@android:color/white"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/edit_password"
-        tools:layout_editor_absoluteX="25dp" />
-
-    <EditText
-        android:id="@+id/edit_password"
-        android:layout_width="311dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/round"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:hint="Enter First Name"
-        android:padding="8dp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_first_name" />
-
-    <TextView
-        android:id="@+id/text_upload"
-        android:layout_width="313dp"
-        android:layout_height="40dp"
-        android:layout_above="@id/radio_group"
-        android:background="@drawable/border_orange"
-        android:text="Sign up with MyMotherNature"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/edit_first_ecolution"
+            android:layout_width="317dp"
+            android:layout_height="168dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/round"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:hint="If you could change 1 daily habit behavior you have to help reduce your negative impact on the environment, what would it be? E.g. Brushing my teeth without the faucet running.\nThis will be your first Ecolution!"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/how_much_help"
+            app:layout_constraintTop_toBottomOf="@+id/how_much_help" />
 
 
+        <TextView
+            android:id="@+id/text_helping"
+            android:layout_width="258dp"
+            android:layout_height="26dp"
+            android:text="How much do you want to help?"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/how_much_help"
+            app:layout_constraintStart_toStartOf="@+id/how_much_help" />
 
-    <ru.dimorinny.floatingtextbutton.FloatingTextButton
-        android:id="@+id/submit"
-        android:layout_width="201dp"
-        android:layout_height="45dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:floating_background_color="@android:color/holo_green_light"
-        app:floating_left_icon="@drawable/upload_logo"
-        app:floating_title="Sign Up"
-        app:floating_title_color="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="468dp" />
+        <Spinner
+            android:id="@+id/how_much_help"
+            android:layout_width="313dp"
+            android:layout_height="42dp"
+            android:layout_above="@id/radio_group"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border_orange"
+            android:text="   How much do you want to learn?"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/user_knowledge_future"
+            app:layout_constraintTop_toBottomOf="@+id/user_knowledge_future" />
+
+        <TextView
+            android:id="@+id/password3"
+            android:layout_width="258dp"
+            android:layout_height="26dp"
+            android:text="How much do you want to learn?"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/user_knowledge_future"
+            app:layout_constraintStart_toStartOf="@+id/user_knowledge_future" />
+
+        <Spinner
+            android:id="@+id/user_knowledge_future"
+            android:layout_width="313dp"
+            android:layout_height="47dp"
+            android:layout_above="@id/radio_group"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border_orange"
+            android:text="   How much do you want to learn?"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/user_knowledge"
+            app:layout_constraintTop_toBottomOf="@+id/user_knowledge" />
+
+        <TextView
+            android:id="@+id/password2"
+            android:layout_width="375dp"
+            android:layout_height="25dp"
+            android:text="How much do you know about our environment?"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/user_knowledge"
+            app:layout_constraintStart_toStartOf="@+id/user_knowledge" />
+
+        <Spinner
+            android:id="@+id/user_knowledge"
+            android:layout_width="313dp"
+            android:layout_height="44dp"
+            android:layout_above="@id/radio_group"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/border_orange"
+            android:text="   How much do you know about the environment"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edit_password"
+            app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+        <TextView
+            android:id="@+id/first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:text="Username"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_first_name"
+            app:layout_constraintStart_toStartOf="@+id/edit_first_name" />
+
+        <EditText
+            android:id="@+id/edit_first_name"
+            android:layout_width="311dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/round"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:hint="Enter Username"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/text_upload"
+            app:layout_constraintTop_toBottomOf="@+id/text_upload" />
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:text="Password"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_password"
+            app:layout_constraintStart_toStartOf="@+id/edit_password" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="311dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:hint="Enter Password"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edit_first_name"
+            app:layout_constraintTop_toBottomOf="@+id/edit_first_name" />
+
+        <TextView
+            android:id="@+id/text_upload"
+            android:layout_width="313dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/radio_group"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_orange"
+            android:text="Sign up with MyMotherNature"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.464"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
+        <ru.dimorinny.floatingtextbutton.FloatingTextButton
+            android:id="@+id/button_finish_sign_up"
+            android:layout_width="119dp"
+            android:layout_height="43dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginLeft="96dp"
+            android:layout_marginTop="20dp"
+            app:floating_background_color="@android:color/holo_green_light"
+            app:floating_left_icon="@drawable/upload_logo"
+            app:floating_title="Finish"
+            app:floating_title_color="@android:color/white"
+            app:layout_constraintStart_toStartOf="@+id/edit_first_ecolution"
+            app:layout_constraintTop_toBottomOf="@+id/edit_first_ecolution" />
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+
+

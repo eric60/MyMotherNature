@@ -16,7 +16,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rate Their Question"
+        android:text="Rate Their EcoQuestion"
         android:textColor="@android:color/white"
         android:textSize="17dp"
         app:layout_constraintBottom_toTopOf="@+id/rate_question"
@@ -66,7 +66,7 @@
     <Spinner
         android:id="@+id/rate_question"
         android:layout_width="313dp"
-        android:layout_height="37dp"
+        android:layout_height="44dp"
         android:layout_above="@id/radio_group"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
@@ -83,20 +83,19 @@
     <TextView
         android:id="@+id/text_upload"
         android:layout_width="321dp"
-        android:layout_height="84dp"
+        android:layout_height="61dp"
         android:layout_above="@id/radio_group"
+        android:layout_marginTop="16dp"
         android:background="@drawable/border_orange"
         android:text="Review another user's EcoQuestion before submitting yours!"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="21sp"
+        android:textSize="19sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/submit_review"
