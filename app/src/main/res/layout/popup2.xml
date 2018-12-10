@@ -31,7 +31,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:padding="5dp"
-        android:text="\nWelcome to MyMotherNature's upload your own Trivia EcoQuestion feature! \n\nYou must first review another fellow player's question. This gives you a chance to see your peer's own questions and to think about your own.\n\nEcoQuestion Rules\n1. Question must relate to the environment \n2. Question must underlie an environmental issue caused by human behavior regarding \nTransportaion, Human Food Consumption and Waste, Human Product Consumption and Waste\n\nThat's it! Have fun and keep learning and saving our environment by changing your behavior and following your Ecolutions! "
+        android:text="\nWelcome to MyMotherNature's upload your own Trivia EcoQuestion feature! \n\nYou must first review another fellow player's question. This gives you a chance to see your peer's own questions and to think about your own.\n\nEcoQuestion Rules\n1. Question must relate to the environment \n2. Question must underlie an environmental issue caused by human behavior regarding \nTransportaion, Human Food Consumption and Waste, or Human Resource Consumption and Waste\n\nThat's it! Have fun and keep learning and saving our environment by changing your behavior and following your Ecolutions! "
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp"

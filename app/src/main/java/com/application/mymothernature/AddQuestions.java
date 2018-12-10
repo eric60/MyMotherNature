@@ -26,6 +26,7 @@ public class AddQuestions {
         q1.answerList.add("300 million tons"); // 3 correct
         q1.answerNum = 3;
         q1.image = (R.drawable.game_plastic_waste);
+        q1.ecolution = "Bring your cotton bags to grocery stores instead of using plastic bags!";
         questionList.add(q1);
 
     }
@@ -38,6 +39,7 @@ public class AddQuestions {
         q2.answerList.add("3 miles"); // 3 correct
         q2.answerNum = 3;
         q2.image = R.drawable.game_cow_pic;
+        q2.ecolution = "Try to eat smaller portions of meat! You will be contributing to a reduced demand in meat!";
         questionList.add(q2);
     }
 
@@ -50,6 +52,7 @@ public class AddQuestions {
         q3.answerList.add("11000 pounds");
         q3.answerNum = 2;
         q3.image =(R.drawable.game_bus_pic);
+        q3.ecolution = "Take the bus whenever you get the chance, or carpool with friends!";
         questionList.add(q3);
     }
 
@@ -61,6 +64,7 @@ public class AddQuestions {
         q4.answerList.add("100,000"); // 3 correct
         q4.answerNum = 3;
         q4.image =(R.drawable.game_pic_plastic_fish);
+        q4.ecolution = "Try to use less plastic. Use a reusable water bottle instead of drinking from plastic bottles.";
         questionList.add(q4);
     }
 
@@ -72,6 +76,7 @@ public class AddQuestions {
         q5.answerList.add("30 Percent"); // 3 correct
         q5.answerNum = 3;
         q5.image =(R.drawable.game_traffic_pic);
+        q5.ecolution = "Try to carpool as much as possible. You'll be reducing the amount of cars on the road and reducing CO2 emissions.";
         questionList.add(q5);
     }
 

@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,24 +22,24 @@
 
     <EditText
         android:id="@+id/edit_ecolutions"
-        android:layout_width="314dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="313dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/round"
         android:backgroundTint="@android:color/holo_orange_light"
-        android:hint="Enter Your Ecolution(s)\nHow do you think you can solve your underlying environmental problem by changing an everyday task? "
+        android:hint="Enter Your Ecolution(s)\nHow do you think you can solve your underlying environmental problem by changing an everyday task?\n\nE.g. Shower 5 minutes or less to reduce your water consumption  "
         android:padding="8dp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toStartOf="@+id/editQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/editQuestion" />
 
     <Spinner
         android:id="@+id/spinner_category"
         android:layout_width="313dp"
         android:layout_height="37dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/border_orange"
         android:text="   Select Category drop down menu"
         android:textColor="@android:color/white"
@@ -41,13 +49,13 @@
         app:layout_constraintTop_toBottomOf="@+id/text_upload" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editQuestion"
         android:layout_width="309dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/round"
         android:backgroundTint="@android:color/holo_orange_light"
-        android:hint="Enter Your EcoQuestion"
+        android:hint="Enter Your EcoQuestion\nE.g. How much water does a 5 minute shower use?"
         android:padding="8dp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -55,11 +63,32 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner_category" />
 
     <TextView
+        android:id="@+id/choose_category"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Choose Question Category"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_category"
+        app:layout_constraintStart_toStartOf="@+id/spinner_category" />
+
+    <TextView
+        android:id="@+id/your_EcoQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginBottom="4dp"
+        android:text="Your EcoQuestion"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/editQuestion"
+        app:layout_constraintStart_toStartOf="@+id/editQuestion" />
+
+    <TextView
         android:id="@+id/text_upload"
         android:layout_width="313dp"
         android:layout_height="37dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/border_orange"
         android:text="Upload Your EcoQuestion!"
         android:textAlignment="center"
@@ -71,15 +100,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/your_ecolutions"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Your Ecolutions"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_ecolutions"
+        app:layout_constraintStart_toStartOf="@+id/edit_ecolutions" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/upload_share1"
+        android:layout_width="61dp"
+        android:layout_height="49dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:floating_background_color="@android:color/holo_orange_light"
+        app:floating_left_icon="@drawable/icon_share"
+        app:floating_title="Share  "
+        app:floating_title_color="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/submit_ecoquestion"
+        app:layout_constraintTop_toTopOf="@+id/submit_ecoquestion" />
+
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/submit_ecoquestion"
         android:layout_width="201dp"
         android:layout_height="45dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="44dp"
         app:floating_background_color="@android:color/holo_green_light"
         app:floating_left_icon="@drawable/upload_logo"
         app:floating_title="Submit for Review"
@@ -89,3 +143,5 @@
 
 
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -55,6 +55,9 @@ public class GameActivity extends AppCompatActivity {
     private AddQuestions questionObj;
     private ArrayList<Questions> listQuestions;
 
+    private String passedQuestions;
+    private String passedEcolutions;
+
     // --------------------------------------------------------deprecated code
 
   /*  private ArrayList<String> questionList;
@@ -121,7 +124,12 @@ public class GameActivity extends AppCompatActivity {
         radioGroup.clearCheck();
 
         if(questionCounter < questionTotal) { // questionCounter starts at 0
-            currQuestion = listQuestions.get(questionCounter).question; // 5 total questions: 0,1,2,3,4
+            Questions questionObj = listQuestions.get(questionCounter);
+            currQuestion = questionObj.question; // 5 total questions: 0,1,2,3,4
+
+            passedQuestions += ("EcoQuestion " + (questionCounter + 1) + "\n" + currQuestion +  "\n\n");
+            passedEcolutions += ("Ecolution " + (questionCounter + 1) + "\n" + questionObj.ecolution +  "\n\n");
+
             textQuestion.setText(currQuestion);
             ArrayList<String> currAnsList = listQuestions.get(questionCounter).answerList;
             r1.setText(currAnsList.get(0));
@@ -146,7 +154,11 @@ public class GameActivity extends AppCompatActivity {
     private void finishQuiz() {
         Intent myIntent = new Intent(getApplicationContext(), AfterGame.class);
         String scoreString = Integer.toString(scoreTotal);
+
         myIntent.putExtra("extra", scoreString);
+        myIntent.putExtra("passedQues", passedQuestions.toString());
+        myIntent.putExtra("passedEcolutions", passedEcolutions.toString());
+
         startActivityForResult(myIntent, 0);
         finish(); // finishes the activity
     }
@@ -199,19 +211,23 @@ public class GameActivity extends AppCompatActivity {
             if(answerNum == 1) {
                 r1.setTextColor(Color.GREEN);
                 textQuestion.setText("The first option was correct");
+               // textQuestion.setTextColor(Color.WHITE);
             }
             else if(answerNum == 2) {
                 r2.setTextColor(Color.GREEN);
                 textQuestion.setText("The second option was correct");
+              //  textQuestion.setTextColor(Color.WHITE);
+
             }
             else if(answerNum == 3) {
                 r3.setTextColor(Color.GREEN);
                 textQuestion.setText("The third option was correct");
+             //   textQuestion.setTextColor(Color.WHITE);
             }
 
             if(questionCounter < questionTotal) {
                 confirmButton.setTitle("Next Question");
-                confirmButton.setTitleColor(Color.BLACK);
+                confirmButton.setTitleColor(Color.WHITE);
             } else {
                 confirmButton.setTitle("Finish Quiz");
                 confirmButton.setTitleColor(Color.GREEN);

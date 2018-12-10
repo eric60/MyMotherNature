@@ -53,6 +53,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:background="@drawable/border_green_dark"
                 android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
@@ -114,7 +115,7 @@
                         android:src="@drawable/cow_icon" />
 
                     <TextView
-                        android:text="Food Consumption and Waste"
+                        android:text="Food \nConsumption and Waste"
                         android:gravity="center"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
@@ -155,7 +156,7 @@
                         android:src="@drawable/product_icon" />
 
                     <TextView
-                        android:text="Product Consumption and Waste"
+                        android:text="Resource Consumption and Waste"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"

@@ -43,9 +43,9 @@ public class ReviewQuestion extends AppCompatActivity implements OnItemSelectedL
         Spinner rateQuestion = findViewById(R.id.rate_question);
         rateQuestion.setOnItemSelectedListener(this);
         List<String> choices = new ArrayList<String>();
-        choices.add("1. Good. Question made me think");
-        choices.add("2. Okay. Could be more interesting");
-        choices.add("3. Bad. Question was boring/too obvious");
+        choices.add("Good. Question made me think");
+        choices.add("Okay. Could be more interesting");
+        choices.add("Bad. Question was boring/too obvious");
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, choices);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -59,8 +59,10 @@ public class ReviewQuestion extends AppCompatActivity implements OnItemSelectedL
                 if(TextUtils.isEmpty(edit_ecolutions.getText())) {
                     Toast.makeText(getApplicationContext(), "Please fill out all selections", Toast.LENGTH_SHORT).show();
                 }
-                Intent intent = new Intent(getApplicationContext(), UploadQuestion.class);
-                startActivity(intent);
+                else {
+                    Intent intent = new Intent(getApplicationContext(), UploadQuestion.class);
+                    startActivity(intent);
+                }
             }
         });
     }

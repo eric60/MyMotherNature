@@ -41,9 +41,9 @@
         android:background="@drawable/border_orange"
         android:text="What percentage of drivers commute solo and don't carpool? Not carpooling causes more cars on the road, more traffic, and more CO2!"
         android:textAlignment="center"
+        android:padding="4dp"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
         android:layout_width="321dp"
         android:layout_height="61dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/border_orange"
         android:text="Review another user's EcoQuestion before submitting yours!"
         android:textAlignment="center"
@@ -93,7 +93,7 @@
         android:textSize="19sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,14 +103,14 @@
         android:layout_height="43dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="28dp"
         app:floating_background_color="@android:color/holo_green_light"
         app:floating_left_icon="@drawable/upload_logo"
         app:floating_title="Submit"
         app:floating_title_color="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edit_ecolutions"
         app:layout_constraintTop_toBottomOf="@+id/edit_ecolutions" />
 
     <TextView

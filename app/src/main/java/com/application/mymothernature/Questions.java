@@ -18,9 +18,11 @@ public class Questions {
 
 //--------------------------------------------------------- new better OOP code
     public String question;
+    public String ecolution;
     public ArrayList<String> answerList;
     public int answerNum;
     public Integer image;
+
 
     public Questions(){
         answerList = new ArrayList<String>();

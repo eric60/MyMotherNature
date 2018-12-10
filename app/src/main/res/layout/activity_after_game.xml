@@ -27,7 +27,7 @@
         android:background="@drawable/border_rectangle_grey"
         android:text="   Ecolution 5: "
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/view_ecolutions_scroll4"
@@ -41,8 +41,9 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/border_rectangle_grey"
         android:text="   Ecolution 4: "
+        android:padding="5dp"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view_ecolutions_scroll3"
         app:layout_constraintTop_toBottomOf="@+id/view_ecolutions_scroll3" />
@@ -55,8 +56,9 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/border_rectangle_grey"
         android:text="   Ecolution 3: "
+        android:padding="5dp"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view_ecolutions_scroll2"
         app:layout_constraintTop_toBottomOf="@+id/view_ecolutions_scroll2" />
@@ -69,17 +71,20 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/border_rectangle_grey"
         android:text="   Ecolution 2: "
+        android:padding="5dp"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view_ecolutions_scroll"
         app:layout_constraintTop_toBottomOf="@+id/view_ecolutions_scroll" />
 
     <TextView
         android:id="@+id/facebook_name"
-        android:layout_width="313dp"
+        android:layout_width="293dp"
         android:layout_height="37dp"
         android:layout_above="@id/radio_group"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/border_orange"
         android:text="Your Ecolutions"
@@ -87,8 +92,6 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/final_score" />
 
@@ -99,8 +102,8 @@
         android:layout_above="@id/radio_group"
         android:layout_marginTop="16dp"
         android:background="@drawable/border_rectangle_grey"
-        android:padding="3dp"
-        android:text="   1. Eating less meat will drastically reduce your calories and reduce demand for meat!"
+        android:padding="5dp"
+        android:text="   Ecolution 1:\nEating less meat will reduce the demand for meat and lead to less CO2 emissions from rasing less livestock."
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -121,7 +124,7 @@
         app:floating_title="Share  "
         app:floating_title_color="@android:color/white"
         app:layout_constraintStart_toEndOf="@+id/view_ecolutions_scroll"
-        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll">
+        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll"/>
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/button_share2"
@@ -137,7 +140,7 @@
         app:floating_title="Share  "
         app:floating_title_color="@android:color/white"
         app:layout_constraintStart_toEndOf="@+id/view_ecolutions_scroll2"
-        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll2">
+        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll2"/>
 
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
@@ -154,7 +157,7 @@
         app:floating_title="Share  "
         app:floating_title_color="@android:color/white"
         app:layout_constraintStart_toEndOf="@+id/view_ecolutions_scroll3"
-        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll3">
+        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll3"/>
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/button_share4"
@@ -170,7 +173,7 @@
         app:floating_title="Share  "
         app:floating_title_color="@android:color/white"
         app:layout_constraintStart_toEndOf="@+id/view_ecolutions_scroll4"
-        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll4">
+        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll4"/>
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/button_share5"
@@ -186,13 +189,14 @@
         app:floating_title="Share  "
         app:floating_title_color="@android:color/white"
         app:layout_constraintStart_toEndOf="@+id/view_ecolutions_scroll5"
-        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll5">
+        app:layout_constraintTop_toTopOf="@+id/view_ecolutions_scroll5" />
+
     <TextView
         android:id="@+id/final_score"
         android:layout_width="345dp"
         android:layout_height="37dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/border_green_dark"
         android:text="Awesome! Your EcoScore was: 34"
         android:textAlignment="center"
@@ -200,7 +204,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -210,8 +214,8 @@
         android:layout_height="49dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
         android:layout_marginTop="36dp"
         app:floating_background_color="@android:color/holo_green_light"
         app:floating_title="View Your Profile"

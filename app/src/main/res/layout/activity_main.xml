@@ -59,7 +59,7 @@
         android:layout_height="47dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        app:floating_background_color="@android:color/holo_green_light"
+        app:floating_background_color="@android:color/holo_orange_light"
         app:floating_left_icon="@drawable/play_icon"
         app:floating_title="Play New Game "
         app:floating_title_color="@android:color/black"
