@@ -118,6 +118,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void moveNextQuestion() {
+
         r1.setTextColor(defaultColor);
         r2.setTextColor(defaultColor);
         r3.setTextColor(defaultColor);
@@ -130,7 +131,9 @@ public class GameActivity extends AppCompatActivity {
             passedQuestions += ("EcoQuestion " + (questionCounter + 1) + "\n" + currQuestion +  "\n\n");
             passedEcolutions += ("Ecolution " + (questionCounter + 1) + "\n" + questionObj.ecolution +  "\n\n");
 
+            textQuestion.setTextColor(Color.BLACK);
             textQuestion.setText(currQuestion);
+
             ArrayList<String> currAnsList = listQuestions.get(questionCounter).answerList;
             r1.setText(currAnsList.get(0));
             r2.setText(currAnsList.get(1));
@@ -141,6 +144,7 @@ public class GameActivity extends AppCompatActivity {
             questionCounter ++;
             textQuestionCount.setText("Question: " + questionCounter + "/" + questionTotal);
             currSubmitted = false; // after answered prev question now on curr question currSubmitted is false
+            confirmButton.setTitleColor(Color.BLACK);
             confirmButton.setTitle("Confirm Answer");
 
             timeLeft = passed_countdown_time + 1000;
@@ -168,7 +172,8 @@ public class GameActivity extends AppCompatActivity {
         currSubmitted = true; // question was submitted for checkCurrAnswer
         RadioButton selectedRadioNum = findViewById(radioGroup.getCheckedRadioButtonId());
         int radioAnswerNumber = radioGroup.indexOfChild(selectedRadioNum) + 1;
-        if(radioAnswerNumber == listQuestions.get(questionCounter - 1).answerNum) {
+        Boolean correct = (radioAnswerNumber == listQuestions.get(questionCounter - 1).answerNum);
+        if(correct) {
             scoreTotal += 5;
             textScore.setText("EcoScore: " + scoreTotal);
         }
@@ -209,26 +214,46 @@ public class GameActivity extends AppCompatActivity {
         r2.setTextColor(Color.RED);
         r3.setTextColor(Color.RED);
         int answerNum = listQuestions.get(questionCounter - 1).answerNum;
+
+        RadioButton selectedRadioNum = findViewById(radioGroup.getCheckedRadioButtonId());
+        int radioAnswerNumber = radioGroup.indexOfChild(selectedRadioNum) + 1;
+        Boolean correct = (radioAnswerNumber == answerNum);
+
             if(answerNum == 1) {
                 r1.setTextColor(Color.GREEN);
-                textQuestion.setText("The first option was correct");
-               // textQuestion.setTextColor(Color.WHITE);
+                if(correct) {
+                    textQuestion.setText("Correct! The first option was correct");
+                    textQuestion.setTextColor(Color.GREEN);
+                } else {
+                    textQuestion.setText("Sorry, The first option was correct");
+                    textQuestion.setTextColor(Color.RED);
+                }
             }
             else if(answerNum == 2) {
                 r2.setTextColor(Color.GREEN);
-                textQuestion.setText("The second option was correct");
-              //  textQuestion.setTextColor(Color.WHITE);
+                if(correct) {
+                    textQuestion.setText("Correct! The second option was correct");
+                    textQuestion.setTextColor(Color.GREEN);
+                } else {
+                    textQuestion.setText("Sorry, The second option was correct");
+                    textQuestion.setTextColor(Color.RED);
+                }
 
             }
             else if(answerNum == 3) {
                 r3.setTextColor(Color.GREEN);
-                textQuestion.setText("The third option was correct");
-             //   textQuestion.setTextColor(Color.WHITE);
+                if(correct) {
+                    textQuestion.setText("Correct! The third option was correct");
+                    textQuestion.setTextColor(Color.GREEN);
+                } else {
+                    textQuestion.setText("Sorry, The third option was correct");
+                    textQuestion.setTextColor(Color.RED);
+                }
             }
 
             if(questionCounter < questionTotal) {
                 confirmButton.setTitle("Next Question");
-                confirmButton.setTitleColor(Color.WHITE);
+                confirmButton.setTitleColor(Color.GREEN);
             } else {
                 confirmButton.setTitle("Finish Quiz");
                 confirmButton.setTitleColor(Color.GREEN);

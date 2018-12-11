@@ -148,7 +148,7 @@
         android:layout_marginTop="8dp"
         app:floating_background_color="@android:color/holo_orange_light"
         app:floating_title="Finish Quiz"
-        app:floating_title_color="@android:color/white"
+        app:floating_title_color="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
