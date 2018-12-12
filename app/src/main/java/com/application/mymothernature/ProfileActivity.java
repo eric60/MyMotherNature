@@ -25,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
     private FloatingTextButton sharebtn1;
     private FloatingTextButton sharebtn2;
     private FloatingTextButton button_go_home;
+    private FloatingTextButton viewLeaderBoards;
 
 
 
@@ -48,6 +49,7 @@ public class ProfileActivity extends AppCompatActivity {
         profile_ecolutions = findViewById(R.id.ecolutions);
         profile_ecoquestions = findViewById(R.id.ecoquestions);
         profile_score = findViewById(R.id.ecoscore);
+        viewLeaderBoards = findViewById(R.id.leaderboards_button);
 
         // could be 2 different attempts: 1 from signupprofile, 1 from aftergame
         if(input_userName != null) {
@@ -113,6 +115,14 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        viewLeaderBoards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LeaderBoardActivity.class);
                 startActivity(intent);
             }
         });

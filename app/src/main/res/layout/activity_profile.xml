@@ -21,6 +21,19 @@
     tools:context="com.application.mymothernature.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/leaderboards_button"
+        android:layout_width="144dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:floating_background_color="@android:color/holo_orange_light"
+        app:floating_left_icon="@drawable/leaderboard_icon"
+        app:floating_title=" View Rank   "
+        app:floating_title_color="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/ecoscore3"
+        app:layout_constraintTop_toBottomOf="@+id/ecoscore3" />
+
     <TextView
         android:id="@+id/ecoscore3"
         android:layout_width="151dp"
@@ -97,7 +110,7 @@
         android:layout_width="325dp"
         android:layout_height="50dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/border_orange_rectangle"
         android:text="   Your EcoQuestions"
         android:textColor="@android:color/white"
@@ -162,8 +175,8 @@
         android:layout_width="154dp"
         android:layout_height="179dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:background="@drawable/border_transparant_orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -177,7 +190,6 @@
         android:layout_above="@id/radio_group"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/border_orange"
         android:text="Username"
         android:textAlignment="center"
