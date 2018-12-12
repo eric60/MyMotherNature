@@ -20,6 +20,7 @@ public class LeaderBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leader_board);
 
+        button_viewProfile = findViewById(R.id.view_profile);
         button_viewProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

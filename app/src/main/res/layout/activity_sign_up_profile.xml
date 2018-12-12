@@ -49,9 +49,9 @@
 
                 <TextView
                     android:id="@+id/text_helping"
-                    android:layout_width="258dp"
+                    android:layout_width="340dp"
                     android:layout_height="26dp"
-                    android:text="How much do you want to help?"
+                    android:text="How much do you want to help the environment"
                     android:textColor="@android:color/white"
                     android:textSize="16dp"
                     app:layout_constraintBottom_toTopOf="@+id/how_much_help"
@@ -85,7 +85,7 @@
                     android:id="@+id/password2"
                     android:layout_width="375dp"
                     android:layout_height="25dp"
-                    android:text="How much do you know about our environment?"
+                    android:text="How much do you know about our environment"
                     android:textColor="@android:color/white"
                     android:textSize="15dp"
                     app:layout_constraintBottom_toTopOf="@+id/user_knowledge"
