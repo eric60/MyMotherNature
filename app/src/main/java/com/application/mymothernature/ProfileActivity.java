@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ericshi.mymothernature.R;
 
@@ -95,6 +96,9 @@ public class ProfileActivity extends AppCompatActivity {
                 myIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 myIntent.putExtra(Intent.EXTRA_TEXT, body);
                 startActivity(Intent.createChooser(myIntent, "Share using"));
+                Toast.makeText(ProfileActivity.this, "+5 EcoPoints!", Toast.LENGTH_SHORT).show();
+                profile_score.setText("EcoScore: 15");
+
             }
         });
         sharebtn2.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +111,8 @@ public class ProfileActivity extends AppCompatActivity {
                 myIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 myIntent.putExtra(Intent.EXTRA_TEXT, body);
                 startActivity(Intent.createChooser(myIntent, "Share using"));
+                Toast.makeText(ProfileActivity.this, "+5 EcoPoints!", Toast.LENGTH_SHORT).show();
+                profile_score.setText("EcoScore: 15");
             }
         });
 

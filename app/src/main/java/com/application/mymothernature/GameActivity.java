@@ -253,10 +253,10 @@ public class GameActivity extends AppCompatActivity {
 
             if(questionCounter < questionTotal) {
                 confirmButton.setTitle("Next Question");
-                confirmButton.setTitleColor(Color.GREEN);
+                confirmButton.setTitleColor(Color.WHITE);
             } else {
                 confirmButton.setTitle("Finish Quiz");
-                confirmButton.setTitleColor(Color.GREEN);
+                confirmButton.setTitleColor(Color.WHITE);
             }
     }
 

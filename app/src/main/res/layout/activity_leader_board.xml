@@ -18,9 +18,9 @@
         android:layout_height="42dp"
         android:layout_above="@id/radio_group"
         android:layout_marginTop="12dp"
-        android:background="@drawable/border_orange"
+        android:background="@drawable/border_green_light"
         android:padding="5dp"
-        android:text="Rank 2. Sam - EcoScore:30"
+        android:text="Rank 2. Sam - EcoScore: 10"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -35,7 +35,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/border_orange"
         android:padding="5dp"
-        android:text="Rank 1. Joe - EcoScore:30"
+        android:text="Rank 1. Joe - EcoScore: 30"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -78,19 +78,20 @@
 
     <TextView
         android:id="@+id/ecoscore"
-        android:layout_width="111dp"
+        android:layout_width="117dp"
         android:layout_height="42dp"
         android:layout_above="@id/radio_group"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/border_orange"
-        android:text="   Rank 2"
+        android:text="Rank 2"
+        android:padding="5dp"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/rank2"
-        app:layout_constraintTop_toBottomOf="@+id/facebook_name" />
+        app:layout_constraintTop_toTopOf="@+id/rank2" />
 
     <ru.dimorinny.floatingtextbutton.FloatingTextButton
         android:id="@+id/view_profile"
@@ -104,7 +105,7 @@
         app:floating_background_color="@android:color/holo_green_light"
         app:floating_left_icon="@drawable/account_logo"
         app:floating_title="View Profile       "
-        app:floating_title_color="@android:color/white"
+        app:floating_title_color="@android:color/black"
         app:layout_constraintStart_toStartOf="@+id/rank3"
         app:layout_constraintTop_toBottomOf="@+id/rank3" />
 
