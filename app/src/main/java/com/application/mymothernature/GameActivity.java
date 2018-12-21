@@ -223,7 +223,7 @@ public class GameActivity extends AppCompatActivity {
                 r1.setTextColor(Color.GREEN);
                 if(correct) {
                     textQuestion.setText("Correct! The first option was correct");
-                    textQuestion.setTextColor(Color.GREEN);
+                    textQuestion.setTextColor(Color.WHITE);
                 } else {
                     textQuestion.setText("Sorry, The first option was correct");
                     textQuestion.setTextColor(Color.RED);
@@ -233,7 +233,7 @@ public class GameActivity extends AppCompatActivity {
                 r2.setTextColor(Color.GREEN);
                 if(correct) {
                     textQuestion.setText("Correct! The second option was correct");
-                    textQuestion.setTextColor(Color.GREEN);
+                    textQuestion.setTextColor(Color.WHITE);
                 } else {
                     textQuestion.setText("Sorry, The second option was correct");
                     textQuestion.setTextColor(Color.RED);
@@ -244,7 +244,7 @@ public class GameActivity extends AppCompatActivity {
                 r3.setTextColor(Color.GREEN);
                 if(correct) {
                     textQuestion.setText("Correct! The third option was correct");
-                    textQuestion.setTextColor(Color.GREEN);
+                    textQuestion.setTextColor(Color.WHITE);
                 } else {
                     textQuestion.setText("Sorry, The third option was correct");
                     textQuestion.setTextColor(Color.RED);

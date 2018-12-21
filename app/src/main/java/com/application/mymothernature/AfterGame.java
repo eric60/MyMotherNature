@@ -153,7 +153,6 @@ public class AfterGame extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
 
-
                 intent.putExtra("allEcoStrings", allEcolutions);
                 intent.putExtra("allQuestions", allQuestions);
                 intent.putExtra("game_score", score);

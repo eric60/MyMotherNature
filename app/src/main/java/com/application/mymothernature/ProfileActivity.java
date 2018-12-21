@@ -27,6 +27,7 @@ public class ProfileActivity extends AppCompatActivity {
     private FloatingTextButton sharebtn2;
     private FloatingTextButton button_go_home;
     private FloatingTextButton viewLeaderBoards;
+    private String afterGameScore;
 
 
 
@@ -43,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity {
         String afterGame_ecoquestions = getIntent().getStringExtra("allQuestions"); // problem - null at beginning of string?
         String afterGame_ecolutions = getIntent().getStringExtra("allEcoStrings"); // problem - null at beginning of string?
 
-        String afterGameScore = getIntent().getStringExtra("game_score");
+        afterGameScore = getIntent().getStringExtra("game_score");
 
 
         profile_userName = findViewById(R.id.username);
@@ -129,8 +130,12 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LeaderBoardActivity.class);
+                if(afterGameScore != null) {
+                    intent.putExtra("extra", afterGameScore);
+                }
                 startActivity(intent);
             }
+
         });
     }
 
